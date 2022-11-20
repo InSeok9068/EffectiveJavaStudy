@@ -27,8 +27,7 @@ public class QnA {
                         .put("gender", "M")
                         .put("name", "이인석")
                         .build())
-                .build(), new TypeReference<GenericVO<Person>>() {
-        });
+                .build(), new TypeReference<GenericVO<Person>>() {});
 
         System.out.println(person);
         System.out.println(genericPerson);
@@ -41,7 +40,8 @@ public class QnA {
         ResponseEntity<GenericVO<Person>> responseEntity2 = new RestTemplate().exchange("https://www.test.com",
                 HttpMethod.GET,
                 new HttpEntity<>(new HttpHeaders()),
-                new ParameterizedTypeReference<GenericVO<Person>>() {
-                });
+                new ParameterizedTypeReference<GenericVO<Person>>() {});
+
+
     }
 }
